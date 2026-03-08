@@ -11,17 +11,6 @@ body{
   font-family:Arial;
 }
 
-.card{
-  margin-top:100px;
-  padding:30px;
-  background:white;
-  border-radius:20px;
-  width:340px;
-  margin-left:auto;
-  margin-right:auto;
-  box-shadow:0px 10px 20px rgba(0,0,0,0.2);
-}
-
 button{
   padding:12px 25px;
   margin:10px;
@@ -34,9 +23,36 @@ button{
   position:relative;
 }
 
+#openBtn{
+  margin-top:200px;
+  font-size:18px;
+}
+
+.card{
+  margin-top:100px;
+  padding:30px;
+  background:white;
+  border-radius:20px;
+  width:340px;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:0px 10px 20px rgba(0,0,0,0.2);
+  display:none;
+}
+
+img{
+  margin-top:10px;
+  border-radius:10px;
+}
+
 </style>
 
 <script>
+
+function openFlower(){
+  document.getElementById("card").style.display="block";
+  document.getElementById("openBtn").style.display="none";
+}
 
 function moveButton(){
   var btn = document.getElementById("angryBtn");
@@ -58,14 +74,29 @@ function forgive(){
 
 <body>
 
-<div class="card">
+<button id="openBtn" onclick="openFlower()">
+🌹 Tap My Flower Aateka
+</button>
+
+<div class="card" id="card">
 
 <h2>Happy Women's Day Aateka 🌷</h2>
 
 <p>
-Okay I admit... I forgot to wish you 😭  
-So this is my small apology flower for you 🌹
+Okay… before you get more angry 😅  
+I need to confess something...
 </p>
+
+<p>
+I forgot to wish you on Women's Day 😭  
+And I know you might be angry.
+</p>
+
+<p>
+So I brought this small flower for you 🌹
+</p>
+
+<img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/rose-1867752_1280.jpg" width="160">
 
 <p><b>Are you still angry?</b></p>
 
@@ -74,7 +105,7 @@ Yes I'm Angry 😡
 </button>
 
 <button onclick="forgive()">
-No i am Not Angry 🙂
+Okay I Forgive You 🙂
 </button>
 
 <p id="result"></p>
