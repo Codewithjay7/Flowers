@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>For Aateka 🌸</title>
+<title>For Dhaval 😂</title>
 
 <style>
 
@@ -44,23 +44,23 @@ button{
 
 <script>
 
-function openFlower(){
+function openCard(){
   document.getElementById("card").style.display="block";
   document.getElementById("openBtn").style.display="none";
 }
 
 function moveButton(){
-  var btn = document.getElementById("angryBtn");
+  var btn = document.getElementById("noBtn");
 
-  var x = Math.floor(Math.random()*200) - 100;
+  var x = Math.floor(Math.random()*300) - 150;
   var y = Math.floor(Math.random()*200) - 100;
 
   btn.style.transform = "translate("+x+"px,"+y+"px)";
 }
 
-function forgive(){
+function yesWoman(){
   document.getElementById("result").innerHTML =
-  "😌 Thank you Aateka ❤️<br>I promise next Women's Day I will wish you first 🌹";
+  "😂 I knew it! Happy Women's Day Dhaval 🌸<br>Thanks for accepting the truth 😎";
 }
 
 </script>
@@ -69,38 +69,30 @@ function forgive(){
 
 <body>
 
-<button id="openBtn" onclick="openFlower()">
-🌹 Tap My Flower Aateka
+<button id="openBtn" onclick="openCard()">
+🌸 Tap This Dhaval
 </button>
 
 <div class="card" id="card">
 
-<h2>Happy Women's Day Aateka 🌷</h2>
+<h2>Happy Women's Day Dhaval 😂</h2>
 
 <p>
-Okay… before you get more angry 😅  
-I need to confess something...
+I know you are not a woman… but still you deserve a Women's Day wish 😆
 </p>
 
-<p>
-I forgot to wish you on Women's Day 😭  
-And I know you might be angry.
-</p>
+<img src="./IMG-20221209-WA0008_Original.jpg" width="160">
 
-<p>
-So I brought this small flower for you 🌹
-</p>
+<p><b>Question:</b></p>
 
-<img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/rose-1867752_1280.jpg" width="160">
+<p>Are you a woman? 🤔</p>
 
-<p><b>Are you still angry?</b></p>
-
-<button id="angryBtn" onmouseover="moveButton()">
-Yes I'm Angry 😡
+<button id="noBtn" onmouseover="moveButton()">
+I am NOT a woman 😎
 </button>
 
-<button onclick="forgive()">
-Okay I Forgive You 🙂
+<button onclick="yesWoman()">
+Okay I am a woman 😂
 </button>
 
 <p id="result"></p>
