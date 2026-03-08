@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>For Dhaval 😂</title>
+<title>For Aateka 🌸</title>
 
 <style>
 
@@ -9,6 +9,17 @@ body{
   background: linear-gradient(135deg,#ffd6e0,#ff9aa2);
   text-align:center;
   font-family:Arial;
+}
+
+.card{
+  margin-top:100px;
+  padding:30px;
+  background:white;
+  border-radius:20px;
+  width:340px;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:0px 10px 20px rgba(0,0,0,0.2);
 }
 
 button{
@@ -23,44 +34,22 @@ button{
   position:relative;
 }
 
-#openBtn{
-  margin-top:200px;
-  font-size:18px;
-}
-
-.card{
-  margin-top:100px;
-  padding:30px;
-  background:white;
-  border-radius:20px;
-  width:340px;
-  margin-left:auto;
-  margin-right:auto;
-  box-shadow:0px 10px 20px rgba(0,0,0,0.2);
-  display:none;
-}
-
 </style>
 
 <script>
 
-function openCard(){
-  document.getElementById("card").style.display="block";
-  document.getElementById("openBtn").style.display="none";
-}
-
 function moveButton(){
-  var btn = document.getElementById("noBtn");
+  var btn = document.getElementById("angryBtn");
 
-  var x = Math.floor(Math.random()*300) - 150;
+  var x = Math.floor(Math.random()*200) - 100;
   var y = Math.floor(Math.random()*200) - 100;
 
   btn.style.transform = "translate("+x+"px,"+y+"px)";
 }
 
-function yesWoman(){
+function forgive(){
   document.getElementById("result").innerHTML =
-  "😂 I knew it! Happy Women's Day Dhaval 🌸<br>Thanks for accepting the truth 😎";
+  "😌 Thank you Aateka ❤️<br>I promise next Women's Day I will wish you first 🌹";
 }
 
 </script>
@@ -69,30 +58,23 @@ function yesWoman(){
 
 <body>
 
-<button id="openBtn" onclick="openCard()">
-🌸 Tap This Dhaval
-</button>
+<div class="card">
 
-<div class="card" id="card">
-
-<h2>Happy Women's Day Dhaval 😂</h2>
+<h2>Happy Women's Day Aateka 🌷</h2>
 
 <p>
-I know you are not a woman… but still you deserve a Women's Day wish 😆
+Okay I admit... I forgot to wish you 😭  
+So this is my small apology flower for you 🌹
 </p>
 
-<img src="./IMG-20221209-WA0008_Original.jpg" width="160">
+<p><b>Are you still angry?</b></p>
 
-<p><b>Question:</b></p>
-
-<p>Are you a woman? 🤔</p>
-
-<button id="noBtn" onmouseover="moveButton()">
-I am NOT a woman 😎
+<button id="angryBtn" onmouseover="moveButton()">
+Yes I'm Angry 😡
 </button>
 
-<button onclick="yesWoman()">
-Okay I am a woman 😂
+<button onclick="forgive()">
+No i am Not Angry 🙂
 </button>
 
 <p id="result"></p>
